@@ -2,9 +2,11 @@ $(document).ready( function() {
   var audio = $('#cAudio');
   console.log(audio);
 
-  $('button').click( function(event) {
+  $('.instrument').on('click', 'button', function(event) {
     // $('button').append('<embed id="embed_player" src="audio.wav" autostart="true" hidden="true"></embed>');
+    audio.get(0).load();
     audio.get(0).play();
+    return false;
   });
 });
 
