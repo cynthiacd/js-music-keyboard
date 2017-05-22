@@ -1,8 +1,11 @@
 $(document).ready( function() {
-  $('div').click( function(event)) {
-    $('this').append('<embed id="embed_player" src="audio.wav" autostart="true" hidden="true"></embed>');
+  var audio = $('#cAudio');
+  console.log(audio);
 
-  };
+  $('button').click( function(event) {
+    // $('button').append('<embed id="embed_player" src="audio.wav" autostart="true" hidden="true"></embed>');
+    audio.get(0).play();
+  });
 });
 
 // $('#wrap').append('<embed id="embed_player" src="audio.wav" autostart="true" hidden="true"></embed>');
