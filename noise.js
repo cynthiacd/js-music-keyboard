@@ -1,19 +1,16 @@
 $(document).ready( function() {
 
   $('button').click( function(event) {
-    var note = $(this).html();
-    var audio = note + 'Audio';
+    var note = $(this).html() + 'Audio';
 
-    document.getElementById(audio).load();
-    document.getElementById(audio).play();
+    document.getElementById(note).load();
+    document.getElementById(note).play();
   });
 
   $('body').keydown( function(event) {
-    // a through g letter keycodes fall between 65 through 71
-    var note = event.key;
-    var audio = note + 'Audio';
+    var note = event.key + 'Audio';
 
-    document.getElementById(audio).load();
-    document.getElementById(audio).play();
+    document.getElementById(note).load();
+    document.getElementById(note).play();
   });
 });
